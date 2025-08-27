@@ -1,0 +1,23 @@
+# Основные настройки приложения
+spring:
+  application:
+    name: demoOT2  # Имя сервиса в трейсах и метриках
+
+opentelemetry:
+  exporters:
+    otlp:
+      endpoint: http://localhost:4317
+      protocol: grpc
+#opentelemetry:
+#  sdk:
+#    disabled: false
+#  exporters:
+#    otlp:
+#      enabled: true
+#      endpoint: http://localhost:4317  # OTLP-приёмник (например, Otel Collector)
+#    jaeger:
+#      enabled: false  # Отключаем Jaeger
+#  traces:
+#    sampler: always_on
+#  service:
+#    name: my-spring-boot-app
